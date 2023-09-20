@@ -12,4 +12,7 @@ $tax = $food * $tax_rate;
 
 $total = $food + $tip + $tax;
 
-print "The total cost of the meal is $" . $total;
+$numberFormatter = new NumberFormatter('ru_RU', NumberFormatter::CURRENCY);
+echo 'The total cost of the meal is ', $numberFormatter->format($total);
+
+// а можно вместо 15 и 16 сторчки сделать вот так: print "The total cost of the meal is $" . $total; (но так будет медленней)
