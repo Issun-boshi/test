@@ -12,7 +12,7 @@ $cities = [
     ['Dallas', 'Texas', 1197816],
     ['San Jose', 'California', 945942]
 ];
-// считаем и ввыодим сумму численности насиленияы
+// считаем и ввыодим сумму численности насиления
 $total = 0;
 print '<table>';
 foreach ($cities as $city) {
