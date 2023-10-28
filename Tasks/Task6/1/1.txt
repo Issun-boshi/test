@@ -1,0 +1,10 @@
+POST in PHP:
+$_POST = [
+    'noodle' => 'barbecued pork',
+    'sweet' => ['puff', 'ricemeat'],
+    'sweet_q' => '4',
+    'submit' => 'Order'
+];
+
+Raw POST:
+noodle=barbecued+pork&sweet%5B%5D=puff&sweet%5B%5D=ricemeat&sweet_q=4&submit=Order
