@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <main>
+            <div class="wrapper">
+                <form method="POST" action="form.php">
+                    <div>
+                        <div>
+                            <label for="weight">Weight</label>
+                            <input required type="text" id="weight" name="weight"/>
+                        </div>
+                        <div>
+                            <label for="length">Length</label>
+                            <input required type="text" id="length" name="length"/>
+                        </div>
+                        <div>
+                            <label for="width">Width</label>
+                            <input required type="text" id="width" name="width"/>
+                        </div>
+                        <div>
+                            <label for="height">Height</label>
+                            <input required type="text" id="height" name="height"/>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <div>
+                        <div>
+                            <label for="address-one1">Address line1</label>
+                            <input autocomplete="sender address-line1" required type="text" id="address-one1" name="address-one1"/>
+                        </div>
+                        <div>
+                            <label for="city1">City1</label>
+                            <input autocomplete="sender address-level2" required type="text" id="city1" name="city1"/>
+                        </div>
+                        <div>
+                            <label for="state1">State1 / Province / Region (optional)</label>
+                            <input autcomplete="sender address-level1" type="text" id="state1" name="state1"/>
+                        </div>
+                        <div>
+                            <label for="zip1">ZIP1 / Postal code (optional)</label>
+                            <input autocomplete="sender postal-code" type="text" id="zip1" name="zip1"/>
+                        </div>
+                        <div>
+                            <label for="country1">Country1</label>
+                            <input autocomplete="sender country" type="text" id="country1" name="country1"/>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <div>
+                        <div>
+                            <label for="address-two2">Address line2</label>
+                            <input autocomplete="recipient address-line1" required type="text" id="address-two2" name="address-one2"/>
+                        </div>
+                        <div>
+                            <label for="city2">City2</label>
+                            <input autocomplete="recipient address-level2" required type="text" id="city2" name="city2"/>
+                        </div>
+                        <div>
+                            <label for="state2">State2 / Province / Region (optional)</label>
+                            <input autcomplete="recipient address-level1" type="text" id="state2" name="state2"/>
+                        </div>
+                        <div>
+                            <label for="zip2">ZIP2 / Postal code (optional)</label>
+                            <input autocomplete="recipient postal-code" type="text" id="zip2" name="zip2"/>
+                        </div>
+                        <div>
+                            <label for="country2">Country2</label>
+                            <input autocomplete="recipient country" type="text" id="country2" name="country2"/>
+                        </div>
+                    </div>
+                    <br/><br/>
+                    <button>Save address</button>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
