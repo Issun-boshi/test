@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>{{type.title}}</h1>
+<br/>
+{% for itemType in type.itemTypes %}
+    <p><a href="{{ path('catalog-item', {itemId: itemType.item.id}) }}">{{itemType.item.title}}</a></p>
+{% endfor %}
+{% endblock %}

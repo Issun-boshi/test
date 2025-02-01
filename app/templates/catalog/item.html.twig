@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>{{item.title}}</h1>
+{% for itemImage in item.itemImages %}
+    <img src="/images/{{itemImage.image}}" title="{{itemImage.description}}" alt="{{itemImage.description}}"/>
+{% endfor %}
+<br/>
+{% for itemProperty in item.itemProperties %}
+    <p>{{itemProperty.property.title}}: {{itemProperty.value}}</p>
+{% endfor %}
+{% endblock %}

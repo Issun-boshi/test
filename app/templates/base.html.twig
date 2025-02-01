@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <div>
+                <p>World of Fishing</p>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="{{ path('home') }}">Главная</a></li>
+                <li>
+                    <p>Рыболовные товары</p>
+                    <ul>
+                        {% for typeId, type in types %}
+                            <li>
+                                <a href="{{ path('catalog', {typeId: typeId})}}">{{type.title}}</a>
+                                {% for subtypeId, subtype in type.children %}
+                                    <li>
+                                        <a href="{{ path('catalog', {typeId: subtypeId})}}">{{subtype.title}}</a>
+                                        {% for subsubtypeId, subsubtype in subtype.children %}
+                                            <li>
+                                                <a href="{{ path('catalog', {typeId: subsubtypeId})}}">{{subsubtype.title}}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </li>
+                                {% endfor %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li><a href="{{ path('news') }}">Новости</a></li>
+                <li><a href="{{ path('delivery') }}">Доставка</a></li>
+                <li><a href="{{ path('contacts') }}">Контакты</a></li>
+                <li><a href="{{ path('about') }}">О нас</a></li>
+            </ul>
+        </nav>
+        <div class="content"><div>{% block body %}{% endblock %}</div></div>
+        <footer>
+            <div>
+                <p>© 2024</p>
+            </div>
+        </footer>
+    </body>
+</html>

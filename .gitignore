@@ -1,5 +1,10 @@
 /docker/al2023.tar.xz
 .env*
+/app/var
+/app/var/*
+/app/vendor
+/app/vendor/*
+/app/composer.lock
 
 # Cache and logs (Symfony2)
 /app/cache/*
