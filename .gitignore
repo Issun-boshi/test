@@ -1,3 +1,6 @@
+/docker/al2023.tar.xz
+.env*
+
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*
